@@ -1,0 +1,17 @@
+
+
+{
+    "name": "bla",
+    "email": "user@gmail.com",
+    "id": "idnumber",
+    "projects": [
+        {
+            "projectName": "promo clip",
+            "videoqulity": "HD",
+            "videofile":"pathtovideo.mov",
+            "contract": "pathtofile.pdf",
+            "invoice": "pathtofile.pdf"
+        }
+    ]
+    
+}

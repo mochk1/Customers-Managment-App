@@ -1,0 +1,34 @@
+.C-card{
+position: relative;
+width:auto;
+height: 110% ;
+border-radius: 3px;
+border: solid 1px rgb(3, 3, 70);
+min-width: 120px;
+background-color: rgb(255, 255, 255);
+-webkit-animation: fadein 0.5s;
+}
+
+.C-card:hover {
+
+    cursor: pointer;
+}
+
+.customer-name{
+font-size: 1.5rem;
+padding: 10px;
+margin: 0px;
+
+}
+
+#projects{
+padding-right: 10px;
+height: 30px;
+margin: 0px;
+
+}
+
+
+
+
+

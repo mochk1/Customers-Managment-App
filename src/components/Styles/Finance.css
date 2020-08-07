@@ -1,0 +1,8 @@
+.main-div-Finance{
+
+    display: flex;
+    
+    margin-right: 500px;
+    margin-top: 50px;
+    -webkit-animation: fadein 0.5s;
+    }

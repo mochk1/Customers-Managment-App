@@ -1,0 +1,43 @@
+.projectCard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin-right: 15%;
+
+}
+
+.Name {
+  font-size: 2.5rem;
+}
+
+#projectscontainer {
+  width: 100%;
+  max-height: 60vh;
+  overflow: auto;
+  margin: 15px;
+
+}
+
+button {
+  padding: 5px;
+  font-size: 1.3rem;
+  display: flex;
+  margin-left: 20px;
+  width: 35px;
+}
+
+.top-buttons{
+display: flex;
+height: fit-content;
+width: 80%;
+}
+
+
+
+.left-btns{
+
+  display: flex;
+  justify-content: flex-end;
+  flex: 1;  
+  }
