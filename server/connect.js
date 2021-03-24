@@ -1,5 +1,5 @@
 const mongoose = require('mongoose');
-const uri = "mongodb+srv://MainUser:dbatlasmainuser321@cluster0.m9wv8.mongodb.net/M-App?retryWrites=true&w=majority";
+const uri = "process.ENV.MONGO_URI"
   
 const Customer = require('./Customer')
 
