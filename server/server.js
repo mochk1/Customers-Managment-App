@@ -1,6 +1,6 @@
 const express = require('express')
 const app = express()
-const port = 4000
+const port = process.ENV.PORT
 const routes = require('./routes.js')
 const cors = require('cors');
 const mongoose  = require('mongoose');
