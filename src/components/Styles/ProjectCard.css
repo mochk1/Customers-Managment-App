@@ -58,13 +58,46 @@ hr.line {
 }
 
 .p-input {
-  width: 60%;
+  width: 70%;
   padding: 6px;
   font-size: 1rem;
   margin-top: 8%;
+  border:none;
+  border-radius: 10%;
+}
+
+.p-input:focus {
+outline: none;
+  border: solid 0.5px rgba(0, 0, 0, 0.164);
+  
+
 }
 
 .icon {
   padding-left: 10px;
   margin: 0;
+}
+
+
+.loadingbg{
+  display: flex;
+  margin-bottom: 60px;
+  width: 10%;
+margin-right: 50%;
+}
+
+
+.btntext{
+ 
+
+margin:5px;
+
+}
+
+.invoicebtn{
+display: flex;
+justify-content: flex-end;
+margin-left: 15%;
+margin-top: 5%;
+
 }

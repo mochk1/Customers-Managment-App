@@ -2,7 +2,7 @@ import React, {useState} from 'react'
 import TodoItem from './TodoItem'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faPlus } from '@fortawesome/free-solid-svg-icons'
-import './Styles/ToDo.css'
+/* import './Styles/ToDo.css' */
 
 const Todolist = (props) => {
 
@@ -13,6 +13,7 @@ const Todolist = (props) => {
     if(value !== '')
     setTodos(prevState => [...prevState, value])
         else return null
+       
     }
     
     const deleteitem = (item) => {

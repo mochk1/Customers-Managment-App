@@ -10,7 +10,8 @@ export const DataContext = React.createContext();
     let State = {
       customer_list: [],
       searchValue: '',
-      Customerid: ''
+      Customerid: '',
+      toaster:''
     };
 
     const [state, setState] = useState(State)
@@ -18,8 +19,7 @@ export const DataContext = React.createContext();
     useEffect(() => {
         axios.get('http://localhost:4000/')
         .then(res => {
-          setState((prevState) => ({...prevState, customer_list: res.data})
-        );
+          setState((prevState) => ({...prevState, customer_list: res.data}) );
         })
         .catch(function (error) {
           console.log(error);

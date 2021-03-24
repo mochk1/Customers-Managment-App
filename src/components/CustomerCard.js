@@ -1,5 +1,5 @@
 import React, {useContext} from 'react'
-import './Styles/CustomerCard.css'
+/* import './Styles/CustomerCard.css' */
 import {DataContext} from './context'
 import { Link} from "react-router-dom";
 
@@ -13,26 +13,19 @@ import { Link} from "react-router-dom";
         setState(prevState => ({...prevState, CustomerName: idnum, Customerid: idd}))
     }
 
-/* let projnum = props.projects.length;
-
-if(projnum === undefined) projnum = 0 */
 
 console.log(props)
     return (
        
-        <div className="C-card"  dir = "rtl" id={props.idd} onClick={clicked} >
+        <div className="C-card p-3 bg-white hover:bg-gray-50 pl-24"  dir = "rtl" id={props.idd} onClick={clicked} >
             <Link to ={`/CustomerPage/${props.idd}`}>
-            <div className="Details" id={props.costumername}   >
-            <p id={props.costumername} className="customer-name">{props.costumername}</p>    
-            <p id="projects"> {`${props.projects.length} פרויקטים`} </p>
+            <div className="Details mb-3 ml-4 " id={props.costumername}   >
+            <p id={props.costumername} className="customer-name text-lg text-blue-900">{props.costumername}</p>    
+            <p className="text-sm pt-1 flex-shrink-0 text-blue-900 " id="projects"> {`${props.projects.length} פרויקטים`} </p>
             </div>
             </Link>
         </div>
-  
     )
-
-
-
 }
 
 

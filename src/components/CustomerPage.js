@@ -1,36 +1,20 @@
 import React, { useContext, useEffect, useState } from "react";
-import "./Styles/CustomerPage.css";
+/* import "./Styles/CustomerPage.css"; */
 import { DataContext } from "./context";
 import ProjectCard from "./ProjectCard";
 import axios from "axios";
-import { Link } from "react-router-dom";
 import { useHistory } from "react-router-dom";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faMinusSquare,
-  faPlusSquare,
-  faChevronRight,
-} from "@fortawesome/free-solid-svg-icons";
+import Spinner from "./Spinner";
+import CustomerPageTop from "./CustomerPageTop"
+
+
 
 const CustomerPage = (props) => {
   const [state, setState] = useContext(DataContext);
-  const { Customerid, CustomerName, customer_list } = state;
+  const { Customerid } = state;
   let history = useHistory();
   const [cdata, setCdata] = useState([]);
-
-  const removeCustomer = () => {
-    const id = Customerid;
-    axios
-      .post("http://localhost:4000/deletecustomer", { data: id })
-      .then((res) => {
-        console.log(res.data);
-        setState((prevState) => ({ ...prevState, customer_list: res.data }));
-      })
-      .catch(function (error) {
-        console.log(error);
-      });
-    history.push("/");
-  };
+ 
 
   useEffect(() => {
     axios
@@ -45,35 +29,30 @@ const CustomerPage = (props) => {
     console.log("context effect ran");
   }, []);
 
+  if (cdata.length === 0) {
+    return (
+  <>
+<div className="projectCard mx-auto">
+    <CustomerPageTop/>
+    <Spinner/>
+    </div>
+ </>
+      )}
+else{
   return (
-    <div className="projectCard">
-      <h1 className="Name"> {CustomerName}</h1>
-      <div className="top-buttons">
-        <button className="back-btn" onClick={() => history.goBack()}>
-          <FontAwesomeIcon className="icons" icon={faChevronRight} ></FontAwesomeIcon>
-        </button>
-        <div className="left-btns">
-            <button className="add-btn">
-              <Link to="/AddInvoice">
-                <FontAwesomeIcon className="icons" icon={faPlusSquare} ></FontAwesomeIcon>
-              </Link>
-  
-            </button>
-
-            <button id="remove-btn" onClick={removeCustomer}>
-              <FontAwesomeIcon className="icons" icon={faMinusSquare}></FontAwesomeIcon>
-            </button>
-        </div>
-        <div/>
-      </div>
-
-      <div id="projectscontainer">
+    
+   
+      <div className="flex flex-col mx-auto">
+       
+      <CustomerPageTop/> 
+      
+      <div id="projectscontainer flex  ">
         {cdata.map((project) => (
-          <ProjectCard name={project.projectName} />
+          <ProjectCard amount={project.amount} name={project.projectname} />
         ))}
       </div>
-    </div>
+      </div>
   );
 };
-
+}
 export default CustomerPage;

@@ -1,5 +1,5 @@
 import React, {useContext} from 'react'
-import './Styles/Dashboard.css'
+/* import './Styles/Dashboard.css' */
 import {DataContext} from './context'
 import { Line,Doughnut } from 'react-chartjs-2';
 

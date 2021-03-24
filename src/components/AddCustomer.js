@@ -1,28 +1,21 @@
 import React, {useContext, useState, useEffect} from 'react'
-import './Styles/AddCustomer.css'
+/* import './Styles/AddCustomer.css' */
 import {DataContext} from './context'
 import axios from 'axios'
-import {  useHistory } from "react-router-dom";
+import { useHistory } from "react-router-dom";
 
 const AddCustomer = () => {
 
 
- 
+const theDate = new Date;
+const CurrentDate = `${theDate.getDate() + "." + (theDate.getMonth()+1) + "."  + theDate.getFullYear() }`
+
   
   const addcustomer = 
 {
-  name: " ",
-  email: " ",
-  projects: [
-    {
-      projectName: "",
-      videoqulity: "",
-      videofile:"",
-      contract: "",
-      invoice: ""
-    }
-  ]
-  
+  name: "",
+  email: "",
+  projects: []  
 }
 
 
@@ -58,12 +51,12 @@ useEffect(() => {
       .then(res => {
        console.log(res.data);
        setState((prevState) => ({...prevState, customer_list: res.data}));
+       history.push("/")
       })
       .catch(function (error) {
         console.log(error);
         
       });
-      history.push("/")
     }
 
 else console.log('init')

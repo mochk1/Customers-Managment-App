@@ -1,5 +1,5 @@
 import React from 'react';
-import './App.css'; 
+/* import './App.css';  */
 import {DataProvider} from './components/context'
 import TopBar from './components/TopBar'
 import Menu from './components/Menu'
@@ -10,12 +10,8 @@ import Menu from './components/Menu'
 
     return (
         <DataProvider>
-      <div className="container" >
-        <div className="menu" dir="rtl"> 
-        <TopBar />
+      <div className=" bg-gray-200 flex h-screen   " dir="rtl" >
         <Menu />
-        </div>
-
         </div>
         </DataProvider>
     );

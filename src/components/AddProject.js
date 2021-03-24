@@ -1,5 +1,5 @@
 import React, {useContext, useState, useEffect} from 'react'
-import './Styles/AddCustomer.css'
+/* import './Styles/AddCustomer.css' */
 import {DataContext} from './context'
 import axios from 'axios'
 import './Styles/AddInvoice.css'
@@ -8,7 +8,7 @@ import {  useHistory } from "react-router-dom";
 
 
 
-const AddInvoice = () => {
+const AddProject = () => {
   const [state, setState] = useContext(DataContext)
   const {Customerid} = state;
 
@@ -19,26 +19,21 @@ const AddInvoice = () => {
     id: Customerid,
     
     dbdata: {
-          projectName: " ",
-          videoqulity: "HD",
-          projectYear: year,
-          videofile:"pathtovideo.mov",
-          contract: "pathtofile.pdf",
-          invoice: "pathtofile.pdf"
-          
+          year: year,
+          projectname: "",
+          amount: ""          
           }
   }
 
   let history = useHistory();
- 
   const [name,setName] = useState('')
-  const [quility,setQuility] = useState('')
+  const [amount,setAmount] = useState('')
   const [formdata, setFormData] = useState(projectData)
   
 
 const formclick = (e) => {
       e.preventDefault();
-      setFormData((prevState) => ({...prevState, dbdata: { ...prevState.dbdata, projectName: name, videoqulity: quility }}));
+      setFormData((prevState) => ({...prevState, dbdata: { ...prevState.dbdata, projectname: name, amount: amount }}));
    
     }
 
@@ -48,7 +43,7 @@ const updateName = (e) => {
 }
 
 const updateQuility = (e) => {
-  setQuility(e.target.value)
+  setAmount(e.target.value)
 }
 
     
@@ -56,12 +51,12 @@ useEffect(() => {
   if(name !== ''){
       axios.post(`http://localhost:4000/addproject`, formdata)
       .then(res => {
-       console.log(res.data);
+        console.log(res.data);
+        history.push("/");
       })
       .catch(function (error) {
         console.log(error);
       });
-      history.push("/");
 }else console.log('init')}, [formdata]);
 
 
@@ -132,4 +127,4 @@ return (
 
 
 
-export default AddInvoice;
+export default AddProject;

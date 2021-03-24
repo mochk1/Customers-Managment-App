@@ -2,7 +2,7 @@
 .clients-main {
 margin: 20px;
 padding: 20px;
-height: 95%;
+height: 100%;
 overflow: auto;
 border: solid 1px rgb(3, 3, 70);
 margin-right: 17%;
@@ -33,9 +33,9 @@ background-color: rgb(246, 246, 246);
 #numcutsomers {
 display: flex;
 justify-content: center;
-margin-right: 100px;
 margin-top: 100px;
 font-size: 1.3rem;
+
 }
 
 

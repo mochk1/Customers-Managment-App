@@ -1,5 +1,5 @@
 import React, {useContext} from 'react'
-import './Styles/Settings.css'
+/* import './Styles/Settings.css' */
 import {DataContext} from './context'
 
 
