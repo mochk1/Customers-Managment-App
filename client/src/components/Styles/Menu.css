@@ -1,0 +1,39 @@
+.bar-right {
+position: sticky;
+top:0;
+  }
+
+/* 
+.menutext {
+    overflow: hidden;
+    padding-right: 30px;
+    padding-left: 30px;
+    color: rgb(255, 255, 255);
+    font-size: 1.2rem;
+    width: fit-content;
+  }
+
+  .menutext:hover {
+    transform-origin: center;
+    transform: scale(1.05);
+    transition: all 0.1s ease;
+    cursor: pointer;
+  }
+
+  hr.solid {
+    width: 18vw;
+    border-top: 1px solid #bbb;
+    opacity: 50%;
+  }
+
+  .i {
+
+    padding-left: 15px;
+
+  }
+
+  #Settings{
+margin-top: 450px;
+  
+  }
+   */

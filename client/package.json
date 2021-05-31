@@ -1,0 +1,62 @@
+{
+  "name": "m-app",
+  "version": "0.1.0",
+  "dependencies": {
+    "@craco/craco": "^6.1.2",
+    "@fortawesome/fontawesome-svg-core": "^1.2.28",
+    "@fortawesome/free-solid-svg-icons": "^5.13.0",
+    "@fortawesome/react-fontawesome": "^0.1.9",
+    "@tailwindcss/postcss7-compat": "^2.0.2",
+    "@testing-library/jest-dom": "^4.2.4",
+    "@testing-library/react": "^9.5.0",
+    "@testing-library/user-event": "^7.2.1",
+    "autoprefixer": "^9.8.6",
+    "axios": "^0.21.1",
+    "chart.js": "^2.9.3",
+    "file-saver": "^2.0.2",
+    "font-awesome": "^4.7.0",
+    "html-pdf": "^2.2.0",
+    "mongoose": "^5.12.1",
+    "nanoid": "^3.1.22",
+    "nodemon": "^2.0.4",
+    "postcss": "^7.0.35",
+    "postcss-cli": "^8.3.1",
+    "react": "^16.13.1",
+    "react-chartjs-2": "^2.9.0",
+    "react-dom": "^16.13.1",
+    "react-router-dom": "^5.2.0",
+    "react-scripts": "4.0.1",
+    "tailwindcss": "npm:@tailwindcss/postcss7-compat@^2.1.2"
+  },
+  "scripts": {
+    "react-start": "craco start",
+    "react-build": "craco build",
+    "react-test": "react-scripts test",
+    "react-eject": "react-scripts eject",
+    "build": "npm run react-build   ",
+    "start": "npm run react-start "
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "@types/react": "^16.9.35",
+    "autoprefixer": "^9.8.6",
+    "concurrently": "^5.2.0",
+    "postcss": "^7.0.35",
+    "postcss-cli": "^8.3.1",
+    "tailwindcss": "npm:@tailwindcss/postcss7-compat@^2.1.2"
+  }
+}

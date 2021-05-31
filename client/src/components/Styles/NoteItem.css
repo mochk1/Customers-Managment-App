@@ -1,0 +1,30 @@
+.notes-main   {
+    -webkit-animation: fadein 0.5s;
+   
+}
+
+.modal   {
+    -webkit-animation: fadein 0.5s;
+    position: fixed;
+   
+}
+
+
+.noteitem  {
+    -webkit-animation: fadein 0.5s;
+   
+}
+
+
+.modal-input {
+
+
+
+
+}
+
+
+@keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}

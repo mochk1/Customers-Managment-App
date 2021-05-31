@@ -1,0 +1,54 @@
+.searchbar {
+  display: flex;
+  margin-right: 22%;
+}
+
+
+.plusbtn {
+  display: flex;
+  margin-right: 70%;
+  margin-top: 35px;
+  position: absolute;
+}
+
+.sendbutton {
+  display: flex;
+  margin-right: 70%;
+  margin-top: 35px;
+  position: absolute;
+  width: 100%;
+}
+
+.plusbtn button {
+  background-color: white;
+  border: solid 1px rgb(3, 3, 70);
+  font-size: 2rem;
+  font-weight: lighter;
+  outline: none;
+  width: 50px;
+}
+
+button:hover {
+  background-color: rgb(188, 245, 207);
+  transform: scale(1.05);
+  -webkit-transition: all 0.1s ease-in;
+  cursor: pointer;
+}
+
+#search {
+  position: absolute;
+  padding: 7px;
+  font-size: 1.3rem;
+  width: 65%;
+  margin-top: 35px;
+  outline: none;
+  border: solid 1px rgb(3, 3, 70);
+  transform-origin: bottom;
+}
+
+#search:focus {
+  outline: none;
+  border: solid 2px rgb(33, 63, 161);
+}
+
+
