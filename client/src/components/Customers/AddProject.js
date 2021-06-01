@@ -48,7 +48,7 @@ const AddProject = () => {
 
   useEffect(() => {
     if (name !== '') {
-      axios.post(`http://localhost:4000/addproject`, formdata)
+      axios.post(`https://myappcustomers.herokuapp.com/addproject`, formdata)
         .then(res => {
          
           history.goBack();
