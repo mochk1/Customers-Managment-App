@@ -21,7 +21,7 @@ export const DataContext = React.createContext();
 
     useEffect(() => {
   
-        axios.post('http://localhost:4000/customers',{userid:localStorage.getItem('userid')})
+        axios.post('https://myappcustomers.herokuapp.com/customers',{userid:localStorage.getItem('userid')})
         .then(res => {
           setState((prevState) => ({...prevState, customer_list: res.data}) );
           })
