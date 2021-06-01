@@ -38,7 +38,7 @@ const ProjectCard = (props) => {
 
   
 const deleteproject = () => {
-  axios.post('http://localhost:4000/deleteproject',
+  axios.post('https://myappcustomers.herokuapp.com/deleteproject',
   {customerid:Customerid, projectid:projectId._id,userid:user_id} )
   .then((res)=>{setState((prevState) => ({...prevState, customer_list: res.data}) );})
   .catch((err)=> console.log(err))
