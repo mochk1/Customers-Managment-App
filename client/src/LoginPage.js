@@ -21,7 +21,7 @@ const [isloading,setisloading]=useState(false)
 const RegisterUser = () => {
   if(usernameRef.current.value  && passwordRef.current.value  ){
     setisloading(true)
-    axios.post('http://localhost:4000/register',
+    axios.post('https://myappcustomers.herokuapp.com/register',
     {username:usernameRef.current.value, password:passwordRef.current.value})
     .then(res => {setstatus(res.data);setisloading(false)})
       .catch(function (err) {console.log(err)})
@@ -33,7 +33,7 @@ const RegisterUser = () => {
 const LoginUser = () => {
   if(usernameRef.current.value  && passwordRef.current.value  ){
       setisloading(true)
-    axios.post('http://localhost:4000/login',
+    axios.post('https://myappcustomers.herokuapp.com/login',
     {username:usernameRef.current.value,
      password:passwordRef.current.value})
     .then(res => {
