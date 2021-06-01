@@ -26,7 +26,7 @@ const ProjectCard = (props) => {
 
 
   const getinvoice = () => {
-    axios.post('http://localhost:4000/createpdf', { id: CustomerName, descreption: descreption, amount: amount })
+    axios.post('https://myappcustomers.herokuapp.com/createpdf', { id: CustomerName, descreption: descreption, amount: amount })
       .then(() => axios.get('http://localhost:4000/fetch-pdf', { responseType: 'blob' }))
       .then((res) => {
         const pdfBlob = new Blob([res.data], { type: 'application/pdf' });
