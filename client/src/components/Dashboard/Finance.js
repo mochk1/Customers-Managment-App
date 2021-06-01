@@ -15,7 +15,7 @@ const numCustomers = customer_list.length;
 
 
     useEffect(() => {
-        axios.get('http://localhost:4000/test')
+        axios.get('https://myappcustomers.herokuapp.com/test')
         .then(res => {
             setStatistics(() =>res.data);
         })
