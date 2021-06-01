@@ -74,6 +74,7 @@ return (
     {isloading?<div className='mx-auto '><Spinner/></div>:<p className='mx-auto py-2 font-medium text-red-400'>{status}</p>}
     <button onClick={LoginUser}  className='mx-10 bg-blue-400 p-1 text-white rounded mt-2 hover:bg-blue-500 transition duration-300 ease-in-out'>Log In</button>
     <button onClick={RegisterUser} className='mx-10 bg-blue-400 p-1 text-white rounded mt-4 hover:bg-blue-500 transition duration-300 ease-in-out'>New User</button>
+    <span className='text-center mt-4'>For easy demo login <br/> use <strong>"demo"</strong> for username and password </span>
 </div>
 
 

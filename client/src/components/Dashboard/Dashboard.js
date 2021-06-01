@@ -15,12 +15,12 @@ const Dashboard = () => {
     
 const Selected = (e)=> {
 
-console.log(e.target.value)
+
 
 }
 
 
-console.log('dashboard rendered')
+
 return (
 
   <div className="dashboard-main mx-auto overflow-auto">

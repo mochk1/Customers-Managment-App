@@ -27,7 +27,7 @@ export const DataContext = React.createContext();
           })
         .catch(function (error) {
           console.log(error);
-        });console.log('context effect ran')
+        });
       }, [state.searchValue,state.Customerid,state.user_id]);
 
     

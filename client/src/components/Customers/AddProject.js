@@ -50,13 +50,13 @@ const AddProject = () => {
     if (name !== '') {
       axios.post(`http://localhost:4000/addproject`, formdata)
         .then(res => {
-          console.log(res.data);
+         
           history.goBack();
         })
         .catch(function (error) {
           console.log(error);
         });
-    } else console.log('init')
+    } 
   }, [formdata]);
 
 

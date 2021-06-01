@@ -21,7 +21,7 @@ const numCustomers = customer_list.length;
         })
         .catch(function (error) {
           console.log(error);
-        });console.log('finance effect ran')
+        });
       }, []);
 
 

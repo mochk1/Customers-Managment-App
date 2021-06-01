@@ -18,7 +18,7 @@ export const CustomersContext = React.createContext();
 
     useEffect(() => {
 
-    console.log('customers context ran')
+    
     
       }, [CustomerState.Clicked, CustomerState.Customerid, CustomerState.CustomerName ]);
       

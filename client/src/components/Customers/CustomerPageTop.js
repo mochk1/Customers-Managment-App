@@ -20,7 +20,6 @@ export default function CustomerPageTop() {
         axios
             .post("http://localhost:4000/deletecustomer", { data: id,userid:localStorage.getItem('userid') })
             .then((res) => {
-                console.log(res.data);
                 setState((prevState) => ({ ...prevState, customer_list: res.data }));
                 history.goBack();
             })

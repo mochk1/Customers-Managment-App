@@ -25,6 +25,7 @@ const [state, setState] = useContext(DataContext)
 const {customer_list,Customerid} = state
 const [name,setName] = useState('')
 const [email,setEmail] = useState('')
+const [text,setText] = useState(false)
 const [formdata, setFormData] = useState(addcustomer)
 
 
@@ -50,14 +51,13 @@ useEffect(() => {
        console.log(res.data);
        setState((prevState) => ({...prevState, customer_list: res.data}));           
       })
-      .then(()=>{history.push('/Customers')})
+      .then(()=>{setText(!text);history.push('/Customers')})
       .catch(function (error) {
         console.log(error);
         
       });
     }
 
-else console.log('init')
 
 }, [formdata]);
 

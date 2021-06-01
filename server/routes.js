@@ -94,12 +94,15 @@ router.post('/addcustomer',  async (req, res) => {
 
 router.post('/createpdf', async (req, res) => {
 
-  await Counter.findOneAndUpdate({}, { $inc: { count: 1 } }); // wait for db to update the counter
-  const invoivenumber = await Counter.find({}); // wait again for db to get the updated number
+/*   await Counter.findOneAndUpdate({}, { $inc: { count: 1 } });
+   // wait for db to update the counter
+  const invoivenumber = await Counter.find({});
+   // wait again for db to get the updated number */
 
   const data = {
 
-    count: invoivenumber[0].count,
+    /* count: invoivenumber[0].count, */
+     count: '00001', 
     id: req.body.id,
     descreption: req.body.descreption,
     amount: req.body.amount

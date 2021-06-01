@@ -40,15 +40,12 @@ const addnote =()=> {
 
 useEffect(()=>{
 
-    console.log(noteText)
+   
 
 
 },[noteText])
 
-/* const updatetext =(e)=> {
-      setnoteText(e.target.value)
-      console.log(e.target.value)
-} */
+
 
 
 const deletenote =(id) => {
