@@ -17,7 +17,7 @@ const CustomerPage = (props) => {
   useEffect(() => {
     setState((prevState) => ({ ...prevState, Loading: true }));
     axios
-      .post("http://localhost:4000/getcustomer", { idn: Customerid })
+      .post("https://myappcustomers.herokuapp.com/getcustomer", { idn: Customerid })
       .then((res) => {
         setCdata(res.data[0].projects);
         setState((prevState) => ({ ...prevState, Loading: false }));})
