@@ -46,7 +46,7 @@ const updateName = (e) => {
 
 useEffect(() => {
   if(name !== ''){
-      axios.post('http://localhost:4000/addcustomer', formdata)
+      axios.post('https://myappcustomers.herokuapp.com/addcustomer', formdata)
       .then(res => {
        console.log(res.data);
        setState((prevState) => ({...prevState, customer_list: res.data}));           
