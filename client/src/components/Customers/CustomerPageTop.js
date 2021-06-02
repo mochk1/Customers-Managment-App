@@ -18,7 +18,7 @@ export default function CustomerPageTop() {
     const removeCustomer = () => {
         const id = Customerid;
         axios
-            .post("http://localhost:4000/deletecustomer", { data: id,userid:localStorage.getItem('userid') })
+            .post("https://myappcustomers.herokuapp.com/deletecustomer", { data: id,userid:localStorage.getItem('userid') })
             .then((res) => {
                 setState((prevState) => ({ ...prevState, customer_list: res.data }));
                 history.goBack();
