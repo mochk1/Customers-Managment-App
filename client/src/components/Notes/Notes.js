@@ -25,7 +25,7 @@ const [delid, setDelid] = useState('')
 useEffect(()=>{
 
     axios.post('https://myappcustomers.herokuapp.com/getnotes', {userid:user_id})
-    .then((res)=>{setnotes((prevState) => ({...prevState, List: res.data}) );console.log('got the notes!')})
+    .then((res)=>{setnotes((prevState) => ({...prevState, List: res.data}) )})
     .catch((err)=>console.log(err))
 
 },[delid])
