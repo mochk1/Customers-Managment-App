@@ -1,0 +1,44 @@
+{
+  "name": "m-app",
+  "version": "1.0.0",
+  "description": "customer managment sysytem",
+  "main": "server.js",
+  "scripts": {
+    "client-install": "npm install --prefix client",
+    "start": "node server.js",
+    "server": "nodemon server.js",
+    "client": "npm start --prefix client",
+    "dev": "concurrently \"npm run server\" \"npm run client \"",
+    "heroku-postbuild": " node server.js "
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mochk1/Customers-Managment-App.git"
+  },
+  "author": "Maor Killner",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mochk1/Customers-Managment-App/issues"
+  },
+  "homepage": "https://github.com/mochk1/Customers-Managment-App#readme",
+  "devDependencies": {
+    "nodemon": "^2.0.7"
+  },
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "concurrently": "^6.0.2",
+    "connect-mongo": "^4.4.1",
+    "cookie-parser": "^1.4.5",
+    "cors": "^2.8.5",
+    "dotenv": "^8.5.1",
+    "express": "^4.17.1",
+    "express-session": "^1.17.1",
+    "html-pdf": "^3.0.0",
+    "install": "^0.13.0",
+    "mongodb": "^3.6.6",
+    "mongoose": "^5.12.7",
+    "npm": "^7.13.0",
+    "passport": "^0.4.1",
+    "passport-local": "^1.0.0"
+  }
+}
