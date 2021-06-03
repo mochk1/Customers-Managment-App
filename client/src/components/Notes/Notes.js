@@ -25,7 +25,7 @@ const [delid, setDelid] = useState('')
 
 useEffect(()=>{
 
-    axios.post('http://localhost:4000/getnotes', {userid:user_id})
+    axios.post('https://myappcustomers.herokuapp.com/getnotes', {userid:user_id})
     .then((res)=>{setnotes((prevState) => ({...prevState, List: res.data}) )})
     .catch((err)=>console.log(err))
 
@@ -33,7 +33,7 @@ useEffect(()=>{
 
 
 const addnote =()=> {
-      axios.post('http://localhost:4000/addnote', {userid:user_id, noteText:noteText, date: CurrentDate})
+      axios.post('https://myappcustomers.herokuapp.com/addnote', {userid:user_id, noteText:noteText, date: CurrentDate})
       .then((res)=>{setnotes((currState) => ({...currState, List: res.data}) );seupdate(!update)})
       .catch((err)=>console.log(err))
       
@@ -50,7 +50,7 @@ useEffect(()=>{
 const deletenote =(id) => {
 
     
-    axios.post('http://localhost:4000/deletenote', {userid:user_id, id:id})
+    axios.post('https://myappcustomers.herokuapp.com/deletenote', {userid:user_id, id:id})
     .then((res)=>setnotes((prevState) => ({...prevState, List: res.data}) ))
     .catch((err)=>console.log(err))
 
@@ -59,7 +59,7 @@ const deletenote =(id) => {
 
 const updatenote =() => {
 console.log('delid')
-    axios.post('http://localhost:4000/updatenote', {userid:user_id, noteText:noteText, noteid:delid})
+    axios.post('https://myappcustomers.herokuapp.com/updatenote', {userid:user_id, noteText:noteText, noteid:delid})
     .then((res)=>{setnotes((prevState) => ({...prevState, List: res.data }) );
                  setopen(!open)})
     .catch((err)=>console.log(err))
