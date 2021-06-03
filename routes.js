@@ -303,11 +303,11 @@ router.post('/deletenote',  async(req, res) => {
 /* UPDATE NOTE */
 
 router.post('/updatenote',  async (req, res) => {
-  const {userid,noteText} = req.body
-  console.log(noteText)
+  const {userid,noteText,noteid} = req.body
+  console.log(req.body)
   try{
    await Notes.updateOne(
-    { _id: '60ac11409c97ca0e485dae9d'},
+    { _id: noteid},
     { $set: { noteText: noteText } },
  
   ); 
